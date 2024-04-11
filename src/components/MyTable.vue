@@ -35,6 +35,8 @@ const sort = () => {
         <template #empty>
             No data added yet
         </template>
+        <!-- не понял, как отсюда пушить в массив (обычный чекбокс нормально ведет себя) -->
+        <!-- реализовал построчное удаление через иконку при ховере -->
         <el-table-column
             type="selection"
             prop="id"

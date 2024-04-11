@@ -32,10 +32,16 @@ const onRemove = () => {
 </script>
 
 <template>
-    <div
+    <router-link
         class="wrapper"
         @mouseover="() => isShow = true"
         @mouseleave="() => isShow = false"
+        :to="{
+            name: 'detail',
+            params: {
+                id: id
+            }
+        }"
     >
         <img
             :src="requireImage(imgName)"
@@ -61,13 +67,16 @@ const onRemove = () => {
                 <component :is="icon" />
             </el-icon>
         </div>
-    </div>
+    </router-link>
 </template>
 <style scoped lang="scss">
 .wrapper {
     display: flex;
     align-items: center;
-    gap: 10px
+    gap: 10px;
+
+    color: black;
+    text-decoration: none;
 }
 
 .icon-wrapper {

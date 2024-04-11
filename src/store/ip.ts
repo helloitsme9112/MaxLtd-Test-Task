@@ -68,33 +68,32 @@ export const useIpStore = defineStore('ip', () => {
 
         const id = new Date().getTime()
 
-        // по-идее я должен создать временный объект, который сразу бы уехал в computed выше со статусом in Progress
-        // но что-то идет не так и я не понял что
-        mappedData.value.set(id, {
-            query: ip,
-            status: 'in progress',
-            continent: '',
-            continentCode: '',
-            country: 'Waiting for country',
-            countryCode: '',
-            region: '',
-            regionName: '',
-            city: 'Waiting for city',
-            district: '',
-            zip: 0,
-            lat: 0,
-            lon: 0,
-            timezone: '',
-            offset: '',
-            currency: '',
-            isp: '',
-            org: '',
-            as: '',
-            asname: '',
-            mobile: false,
-            proxy: false,
-            hosting: false
-        })
+        // где-то потерял реактивность
+        // mappedData.value.set(id, {
+        //     query: ip,
+        //     status: 'in progress',
+        //     continent: '',
+        //     continentCode: '',
+        //     country: 'Waiting for country',
+        //     countryCode: '',
+        //     region: '',
+        //     regionName: '',
+        //     city: 'Waiting for city',
+        //     district: '',
+        //     zip: 0,
+        //     lat: 0,
+        //     lon: 0,
+        //     timezone: '',
+        //     offset: '',
+        //     currency: '',
+        //     isp: '',
+        //     org: '',
+        //     as: '',
+        //     asname: '',
+        //     mobile: false,
+        //     proxy: false,
+        //     hosting: false
+        // })
 
         try {
             axios.get<IPData>(`http://ip-api.com/json/${ip}`).then((r) => {

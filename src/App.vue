@@ -16,6 +16,10 @@ import MyHeader from './components/MyHeader.vue';
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
