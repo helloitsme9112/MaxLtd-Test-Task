@@ -18,7 +18,6 @@ const deleteMultiple = computed(() => {
 })
 
 const sort = () => {
-    console.log(table.value)
     table?.value.sort('country', sortDir.value)
 }
 </script>
